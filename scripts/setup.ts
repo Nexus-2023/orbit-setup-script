@@ -163,23 +163,23 @@ async function main() {
     ////////////////////////////////
     /// L3 Chain Configuration ///
     //////////////////////////////
-    if (!rs.l3config) {
-      console.log(
-        'Running l3Configuration script to configure your Orbit chain 📝📝📝📝📝'
-      )
-      await l3Configuration(privateKey, L2_RPC_URL, L3_RPC_URL)
-      rs.l3config = true
-    }
+    // if (!rs.l3config) {
+    //   console.log(
+    //     'Running l3Configuration script to configure your Orbit chain 📝📝📝📝📝'
+    //   )
+    //   await l3Configuration(privateKey, L2_RPC_URL, L3_RPC_URL)
+    //   rs.l3config = true
+    // }
     ////////////////////////////////
     /// Transfering ownership /////
     //////////////////////////////
-    if (!rs.transferOwnership) {
-      console.log(
-        'Transferring ownership on L3, from rollup owner to upgrade executor 🔃🔃🔃'
-      )
-      await transferOwner(privateKey, L2Provider, L3Provider)
-      rs.transferOwnership = true
-    }
+    // if (!rs.transferOwnership) {
+    //   console.log(
+    //     'Transferring ownership on L3, from rollup owner to upgrade executor 🔃🔃🔃'
+    //   )
+    //   await transferOwner(privateKey, L2Provider, L3Provider)
+    //   rs.transferOwnership = true
+    // }
   } catch (error) {
     console.error('Error occurred:', error)
     const runtimeString = JSON.stringify(rs)
